@@ -11,13 +11,8 @@ class Bow: public Weapon {
 public:
     explicit Bow(int s, bool m = false, int a = 20);
 
-    virtual int use() override;
-
-
-    // TODO add a constructor with an "a" parameter with a default of 20
-    // must it be explicit ?
-
     // override use(). Each use should decrement arrows
+    int use() override;
 
     int getArrows() const {
         return arrows;
@@ -26,6 +21,7 @@ public:
     void setArrows(int arrows) {
         Bow::arrows = arrows;
     }
+
 
 protected:
     int arrows;
