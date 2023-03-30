@@ -4,6 +4,8 @@
 
 #include "Orc.h"
 
+Orc::Orc(int s, int hp) {}
+
 void Orc::move(int x, int y) {
     int addMovement = 0;
     if (strength > 10)
