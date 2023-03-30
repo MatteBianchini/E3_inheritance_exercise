@@ -4,11 +4,13 @@
 
 #ifndef E3_INHERITANCE_EXERCISE_ORC_H
 #define E3_INHERITANCE_EXERCISE_ORC_H
-
+#include "GameCharacter.h"
 // TODO extend GameCharacter... do we need to include GameCharacter.h?
 class Orc {
 public:
     explicit Orc(int s, int hp=20);
+
+
 
     // TODO override fight: if strength > 10 perform second attack
 

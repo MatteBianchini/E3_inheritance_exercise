@@ -20,17 +20,16 @@ public:
     GameCharacter(const GameCharacter &original);
     GameCharacter &operator=(const GameCharacter &right);
 
-    void move(int x, int y); // TODO we want to override it. Must it be virtual ?
+    virtual void move(int x, int y);
 
-    // TODO we want to override it. Must it be virtual ?
-    char getCharacterSymbol() const {
+    virtual char getCharacterSymbol() const {
         return 'C';
     }
 
-    int fight(GameCharacter &enemy); // TODO we want to override it. Must it be virtual ?
+    virtual int fight(GameCharacter &enemy);
     bool isLegalFight(const GameCharacter &enemy) const;
 
-    int receiveDamage(int points); // TODO we want to override it. Must it be virtual ?
+    virtual int receiveDamage(int points);
 
     static int l1Distance(const GameCharacter& p, const GameCharacter& q);
 
@@ -60,7 +59,7 @@ public:
     int getMovements() const;
     void setMovements(int movements);
 
-private:
+protected:
     int HP;
     int armor;
     int movements;
