@@ -4,16 +4,17 @@
 
 #ifndef E3_INHERITANCE_EXERCISE_WIZARD_H
 #define E3_INHERITANCE_EXERCISE_WIZARD_H
-
+#include "GameCharacter.h"
 #include <string>
 
 // TODO extend GameCharacter
-class Wizard {
-    // TODO add std::string name and mana in constructor
+class Wizard : public GameCharacter {
 
+    // TODO add std::string name and mana in constructor
+    Wizard(std::string& name, int mana, int hp = 20);
     // TODO override fight. Use mana to change behaviour. 
     // XXX it's already implemented in .cpp file
-
+    int fight(GameCharacter &enemy) override;
     // in this class do not override move()
 
     // in derived classes we can introduce new behaviours, like this brand new method:

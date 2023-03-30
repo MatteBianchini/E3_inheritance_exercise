@@ -26,5 +26,4 @@ protected:
     bool magicRecover;
 };
 
-
 #endif //E3_INHERITANCE_EXERCISE_SKELETON_H
