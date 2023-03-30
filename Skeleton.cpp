@@ -4,7 +4,10 @@
 
 #include "Skeleton.h"
 #include "Dice.h"
-
+Skeleton::Skeleton(int hp, bool magicRecover) : magicRecover(false){
+    Skeleton::HP = hp;
+    Skeleton::magicRecover = magicRecover;
+}
 // In some cases a skeleton will be healed by the attack !
 int Skeleton::receiveDamage(int points) {
     Dice myDice(6);
