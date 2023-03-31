@@ -9,9 +9,10 @@
 
 // TODO extend GameCharacter
 class Wizard : public GameCharacter {
-
+public:
     // TODO add std::string name and mana in constructor
-    Wizard(std::string& name, int mana, int hp = 20);
+    Wizard() : Wizard("Gaster", 100, 30) {}
+    Wizard(std::string name, int mana, int hp = 30);
     // TODO override fight. Use mana to change behaviour. 
     // XXX it's already implemented in .cpp file
     int fight(GameCharacter &enemy) override;
@@ -21,7 +22,7 @@ class Wizard : public GameCharacter {
     virtual void doMagic(); // it's virtual: we expect to further derive and override its behaviour in derived classes
 
     // override base class method
-    char getCharacterSymbol() const {
+    char getCharacterSymbol() const override{
         return 'W';
     }
 

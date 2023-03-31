@@ -11,7 +11,8 @@
 class Knight : public GameCharacter {
 public:
     // TODO add a std::string name and some values for the new attributes
-    Knight(const std::string& name, int dexterity, bool paladin = false, int hp =20);
+    Knight() : Knight("Undyne", 5, false, 20) {}
+    Knight(std::string name, int dexterity, bool paladin = false, int hp =20);
 
     // TODO override fight: dexterity > 10 perform second attack
     // if paladin then +10 damage

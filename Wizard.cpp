@@ -5,9 +5,9 @@
 #include "Wizard.h"
 
 #include <iostream>
-#include <utility>
 
-Wizard::Wizard(std::string& name, int mana, int hp) : GameCharacter(hp), mana(mana), name(name) {
+
+Wizard::Wizard(std::string name, int mana, int hp) : GameCharacter(hp), mana(mana), name(name) {
     Wizard::mana=mana;
     Wizard::name=name;
 }

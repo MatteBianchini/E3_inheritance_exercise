@@ -10,8 +10,8 @@
 class Sword : public Weapon {
 public:
     explicit Sword(int s, bool m = false, bool v = false);
-
-    virtual int use() override;
+    Sword(): Sword(4, false, false) {};
+    int use() override;
 
     bool isValirian() const {
         return valirian;

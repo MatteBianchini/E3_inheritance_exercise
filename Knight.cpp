@@ -2,9 +2,10 @@
 // Created by Marco Bertini on 08/04/18.
 //
 #include <string>
+#include <utility>
 #include "Knight.h"
 
-Knight::Knight(const std::string& name, int dexterity, bool paladin, int hp) : GameCharacter(hp), dexterity(dexterity), paladin(paladin), name(name) {
+Knight::Knight(std::string name, int dexterity, bool paladin, int hp) : GameCharacter(hp), dexterity(dexterity), paladin(paladin), name(name) {
     Knight::dexterity=dexterity;
     Knight::paladin=paladin;
     Knight::name=name;

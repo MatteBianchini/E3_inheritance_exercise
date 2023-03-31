@@ -61,7 +61,7 @@ bool isLegalCell(int x, int y, const Dungeon &map) {
             return false;
         default:
             return false;
-    };
+    }
 }
 
 // find a cell starting from x,y that can host a game character
@@ -191,7 +191,7 @@ void renderGame(Dungeon &map, GameCharacter &hero, GameCharacter& enemy) {
                     case TileType::Chest:
                         std::cout << "*";
                         break;
-                };
+                }
             }
         }
         std::cout << std::endl;
@@ -205,8 +205,12 @@ int main() {
     map.createDungeon(80, 25, 50);
     // create hero and set him/her up
     GameCharacter* hero;
-    bool useKnight = true;
+    bool useKnight;
     // TODO create a Knight or a Wizard hero depending on useKnight
+    if(useKnight)
+        hero = new Knight("Undyne", 10, false, 20);
+    else
+        hero = new Wizard("Gaster", 100, 30);
     // find a legal start position
     int startX = 0;
     int startY = 0;
@@ -214,13 +218,18 @@ int main() {
     hero->setPosX(startX);
     hero->setPosY(startY);
     // create a weapon and give it to hero
-    bool useSword = true;
+    bool useSword;
     Weapon* sword;
+    if (useSword)
+        Weapon : new Sword();
+    else
+        new Bow();
     // TODO create a Sword or a Bow, depending on useSword
     hero->setWeapon(sword);
     // create an enemy (an Orc or a Skeleton)
     GameCharacter* enemy;
     // TODO create an orc
+
     // TODO create a skeleton
     // find monster position not too far from hero position
     startX += 5;

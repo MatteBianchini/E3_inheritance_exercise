@@ -10,6 +10,7 @@
 class Bow: public Weapon {
 public:
     explicit Bow(int s, bool m = false, int a = 20);
+    Bow() : Bow(10, false, 20){}
 
     // override use(). Each use should decrement arrows
     int use() override;
